@@ -1,0 +1,24 @@
+package chapter7.example1.exceptions;
+
+import java.util.InputMismatchException;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
+
+public class ScanInt6 {
+
+    public static void main(String[] args) {
+
+        String integerStr = "";
+        System.out.println("Type an integer to the console: ");
+        
+        Scanner sc = new Scanner(System.in);
+        try {
+            System.out.println("You typed the integer value: " + sc.nextInt());
+            System.out.println("Done... Closing the scanner");
+            sc.close();
+        } catch (Exception ex) {
+            System.out.println("Error: you type some text is not an integer value");
+        } 
+    }
+
+}
